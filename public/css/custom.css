@@ -1,0 +1,318 @@
+/* Premium Blog Custom Stylesheet */
+
+/* Breadcrumb Banner */
+.page-breadcrumb.bblog {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: #ffffff;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 10px 30px rgba(0, 134, 255, 0.15);
+}
+
+.page-breadcrumb.bblog h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.breadcrumb-row .breadcrumb {
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #ffffff;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Horizontal Blog Card Layout (dz-card style-1 blog-half) */
+.dz-card.style-1.blog-half {
+    display: flex;
+    flex-direction: row;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+    height: 100%;
+    min-height: 220px;
+}
+
+.dz-card.style-1.blog-half:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 134, 255, 0.12);
+    border-color: var(--color-primary-light);
+}
+
+.dz-card.style-1.blog-half .dz-media {
+    flex: 0 0 35%;
+    max-width: 35%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.dz-card.style-1.blog-half .dz-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dz-card.style-1.blog-half:hover .dz-media img {
+    transform: scale(1.05);
+}
+
+.dz-card.style-1.blog-half .dz-info {
+    flex: 1;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dz-card.style-1.blog-half .dz-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.dz-card.style-1.blog-half .dz-title a {
+    color: #0f172a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dz-card.style-1.blog-half .dz-title a:hover {
+    color: var(--color-primary);
+}
+
+.dz-card.style-1.blog-half p {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Sidebar Widgets */
+.sidebar-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.widget-title {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Category Grid in Sidebar */
+.category-grid.better-ui {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.category-grid.better-ui .cat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    border-bottom: 4px solid var(--color-primary);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border-top: 1px solid #f1f5f9;
+    border-left: 1px solid #f1f5f9;
+    border-right: 1px solid #f1f5f9;
+}
+
+.category-grid.better-ui .cat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 134, 255, 0.15);
+    color: var(--color-primary-dark);
+}
+
+.category-grid.better-ui .cat-card .title {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 6px;
+}
+
+/* Nav Links Underline effect */
+.navbar-nav .nav-link {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+/* Pagination Styling */
+.pagination {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    gap: 6px;
+}
+
+.pagination .page-item .page-link {
+    border-radius: 10px !important;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 10px 18px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-light);
+}
+
+/* Custom Buttons */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 134, 255, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 134, 255, 0.25);
+}
+
+.btn-outline-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Category Pill Buttons on List Page */
+.category-btn-pill {
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14.5px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.category-btn-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 134, 255, 0.15);
+}
+
+/* Hover Up utilities */
+.hover-up {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-up:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 134, 255, 0.15) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .dz-card.style-1.blog-half {
+        flex-direction: column;
+    }
+    
+    .dz-card.style-1.blog-half .dz-media {
+        flex: 0 0 auto;
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .dz-card.style-1.blog-half .dz-info {
+        padding: 20px;
+    }
+
+    .page-breadcrumb.bblog {
+        padding: 40px 0;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .page-breadcrumb.bblog h1 {
+        font-size: 28px;
+    }
+}

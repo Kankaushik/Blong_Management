@@ -1,0 +1,257 @@
+/* GovtAlerts Admin Dashboard Stylesheet */
+
+:root {
+    --admin-primary: #00a5ea; /* Sky blue brand background from screenshots */
+    --admin-sidebar-bg: #ffffff;
+    --admin-border-color: #e2e8f0;
+    --admin-text-muted: #94a3b8;
+}
+
+body {
+    background-color: #f4f7fb;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #334155;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Branding Header */
+.sidebar-header-brand {
+    background-color: var(--admin-primary) !important;
+    color: #ffffff;
+    padding: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-brand-title {
+    font-weight: 700;
+    font-size: 19px;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
+
+.sidebar-status-seo {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.sidebar-status-seo .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #10b981; /* Green active dot */
+    border-radius: 50%;
+}
+
+.sidebar-logo-box {
+    background-color: #eab308; /* Yellow brand Y box */
+    color: #0f172a;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Links */
+.admin-sidebar {
+    width: 250px;
+    background-color: var(--admin-sidebar-bg);
+    border-right: 1px solid var(--admin-border-color);
+    flex-shrink: 0;
+    min-height: 100vh;
+}
+
+.admin-sidebar .nav-link {
+    color: #475569 !important;
+    font-weight: 500;
+    font-size: 14.5px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: var(--admin-primary) !important;
+    background-color: #f8fafc;
+}
+
+.admin-sidebar .sub-nav {
+    list-style: none;
+    padding-left: 28px;
+    margin: 0;
+}
+
+.admin-sidebar .sub-nav .nav-link {
+    padding: 8px 18px;
+    font-size: 13.5px;
+}
+
+.admin-sidebar .sub-nav .nav-link.active-sublink {
+    background-color: #f1f5f9;
+    color: var(--admin-primary) !important;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/* Top Navbar path */
+.admin-top-navbar {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--admin-border-color);
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-breadcrumb {
+    font-size: 13.5px;
+    color: #64748b;
+    margin: 0;
+}
+
+.admin-breadcrumb-main {
+    font-weight: 700;
+    color: #1e293b;
+    margin-right: 8px;
+}
+
+/* Tables matching JobYaari */
+.table-jobyaari {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-jobyaari thead th {
+    background-color: #222222 !important; /* Dark black header from screenshots */
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 10px;
+    border: 1px solid #334155;
+    vertical-align: middle;
+}
+
+.table-jobyaari tbody td {
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.table-jobyaari tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.action-icon-link {
+    color: #64748b;
+    font-size: 18px;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.action-icon-link:hover {
+    color: var(--admin-primary);
+}
+
+.action-icon-link.text-danger:hover {
+    color: #ef4444 !important;
+}
+
+/* Dashboard statistics cards */
+.admin-stat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid var(--admin-border-color);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.admin-stat-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.admin-stat-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.admin-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Custom form creation elements */
+.form-box-jobyaari {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid var(--admin-border-color);
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.dashed-upload-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.dashed-upload-zone:hover {
+    border-color: var(--admin-primary);
+}
+
+.dashed-upload-zone .cloud-icon {
+    font-size: 40px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.dashed-upload-zone .upload-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 2px;
+}
+
+.grow {
+    flex-grow: 1 !important;
+}
