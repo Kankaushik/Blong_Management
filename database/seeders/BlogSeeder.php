@@ -12,6 +12,11 @@ class BlogSeeder extends Seeder
      */
     public function run(): void
     {
+        // Skip if blogs already exist to prevent duplicates on container restart
+        if (Blog::count() > 0) {
+            return;
+        }
+
         // Add 5 highly professional mock posts
         Blog::create([
             'title' => 'SSC CGL Admit Card 2026 Out, Direct Link to Download Tier-1 Hall Ticket',
