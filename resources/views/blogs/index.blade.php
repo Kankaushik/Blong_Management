@@ -134,7 +134,7 @@
                                     @if($blog->image)
                                     <img src="{{ asset('uploads/'.$blog->image) }}" alt="{{ $blog->title }}">
                                     @else
-                                    <img src="https://via.placeholder.com/600x400?text=No+Image" alt="Placeholder Image">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' fill='%23f1f5f9'%3E%3Crect width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-family='sans-serif' font-size='20'%3ENo Image%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23cbd5e1' font-family='sans-serif' font-size='14'%3EAvailable%3C/text%3E%3C/svg%3E" alt="{{ $blog->title }}">
                                     @endif
                                 </a>
                             </div>
